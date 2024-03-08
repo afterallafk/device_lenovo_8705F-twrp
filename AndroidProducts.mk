@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_8705F.mk
+    $(LOCAL_DIR)/twrp_8705F.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_8705F-user \
-    omni_8705F-userdebug \
-    omni_8705F-eng
+    twrp_8705F-user \
+    twrp_8705F-userdebug \
+    twrp_8705F-eng
