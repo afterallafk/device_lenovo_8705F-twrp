@@ -4,7 +4,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-
-add_lunch_combo omni_8705F-user
-add_lunch_combo omni_8705F-userdebug
-add_lunch_combo omni_8705F-eng
+export USE_CCACHE=1
+export CCACHE_COMPRESS=1
+export CCACHE_DIR=~/ccache
+export CCACHE_MAXSIZE=50G
