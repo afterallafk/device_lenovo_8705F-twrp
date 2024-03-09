@@ -32,6 +32,61 @@ budget tablet from Lenovo.
  Front camera | 5 MP      
 
 
-  ## Device picture
+## Flashing Instructions
 
-  ![Lenovo Tab M8 ](https://img.myipadbox.com/upload/store/product_l/WMC0711S.jpg "Lenovo Tab M8")
+- Enable developers options by tapping build number 7 times
+- After this enable oem unlock option in the developers options
+- Install the adb and fastboot drivers on your pc
+- Download platform-tools
+- Download the blankvbmeta.img and recovery.img from the release section of this repository
+- Place these two image files in platform-tools folder and connect your tablet to the pc
+- In the platform-tools folder open cmd
+- In the cmd type adb devices to make sure that your device is connected and detected
+```
+adb devices
+
+```
+- Now type the commands as follows
+```
+adb reboot bootloader
+
+```
+- Now,
+```
+fastboot flashing unlock
+
+```
+- Now, press the volume up button wait for few seconds to unlock the bootloader of the device after it shows SUCCESS. Then proceed as follows:
+```
+fastboot flash vbmeta blankvbmeta.img
+
+```
+- Now finally flash the recovery
+```
+fastboot flash recovery recovery.img
+
+```
+- Now booting into recovery
+```
+fastboot reboot recovery
+
+```
+- Now wait for few seconds then recovery will open up
+- Once the recovery is open if u see 0MB internal storage
+- Go to the wipe option and format your data
+- Then reboot to the recovery from reboot options
+- Now enjoy your flashing !!!
+
+# A tip for the ROMS flashing after the flashing is done
+- Once the ROM is flashed
+- Go to reboot options from there reboot to the bootloader
+- Give this command
+```
+fastboot format userdata
+
+```
+- Then give this command 
+```
+fastboot reboot
+
+```
